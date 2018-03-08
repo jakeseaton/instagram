@@ -90,3 +90,10 @@ class InstagramPost(TimeStamp):
     # fields out right now)
     post_json = models.TextField()
     instagram_user = models.ForeignKey(InstagramUser, related_name="posts")
+
+class FashionBlogger(TimeStamp):
+    name = models.CharField(max_length=255)
+    blog_url = models.CharField(max_length=255, blank=True, null=True)
+    instagram_user = models.ForeignKey(InstagramUser, blank=True, null=True)
+
+
